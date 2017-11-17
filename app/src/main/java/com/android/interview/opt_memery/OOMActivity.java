@@ -81,7 +81,7 @@ public class OOMActivity extends Activity{
         Log.d("MLJ","bitmap count=" + bitmap1.getByteCount());
     }
 
-    
+
     public void choosePart2Show(){
 //        DisplayMetrics dm = new DisplayMetrics();
 //        dm = this.getResources().getDisplayMetrics();
@@ -94,5 +94,10 @@ public class OOMActivity extends Activity{
 //        bitmap=decoder.decodeRegion(new Rect(width/2-WID/2+shiftpx,
 //                height/2-SCREEN_HEIGHT/2,width/2+SCREEN_WIDTH/2+shiftpx,
 //                height/2+SCREEN_HEIGHT/2),options2);
+    }
+
+    @Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
     }
 }
